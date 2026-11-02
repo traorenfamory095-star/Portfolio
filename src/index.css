@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+/* Ce fichier ne contient que le thème (couleurs, polices, variante « dark »).
+   Toute la mise en forme est faite avec des classes utilitaires Tailwind dans les composants. */
+
+/* La variante dark: suit l'attribut data-theme posé sur <html> par useTheme. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* Valeurs des couleurs : thème clair (par défaut) et thème sombre.
+   [data-theme='light'] permet aussi d'afficher les deux thèmes côte à côte dans le guide de style. */
+:root,
+[data-theme='light'] {
+  --paper: #f4efe6;
+  --ink: #252722;
+  --accent: #b85c38;
+  --accent-strong: #9c4524;
+  --sand: #ded2c1;
+  --olive: #4f523a;
+  --btn-fg: #f4efe6;
+  --focus: #9c4524;
+  --line: rgba(37, 39, 34, .3);
+  --line-soft: rgba(37, 39, 34, .22);
+  --menu-bg: #252722;
+  --menu-fg: #f4efe6;
+  --projects-bg: #252722;
+  --projects-fg: #f4efe6;
+  --projects-muted: #ded2c1;
+  --projects-accent: #e08a66;
+  --projects-line: rgba(244, 239, 230, .3);
+}
+
+[data-theme='dark'] {
+  --paper: #1b1a17;
+  --ink: #f1ebdf;
+  --accent: #d98a68;
+  --accent-strong: #d98a68;
+  --sand: #2c2a25;
+  --olive: #a3a67f;
+  --btn-fg: #1b1a17;
+  --focus: #d98a68;
+  --line: rgba(241, 235, 223, .3);
+  --line-soft: rgba(241, 235, 223, .18);
+  --menu-bg: #2c2a25;
+  --menu-fg: #f1ebdf;
+  --projects-bg: #24221e;
+  --projects-fg: #f1ebdf;
+  --projects-muted: #cfc6b4;
+  --projects-accent: #d98a68;
+  --projects-line: rgba(241, 235, 223, .25);
+}
+
+/* Noms utilisables dans les classes : bg-paper, text-ink, border-line, text-accent-strong… */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-sand: var(--sand);
+  --color-olive: var(--olive);
+  --color-btn-fg: var(--btn-fg);
+  --color-focus: var(--focus);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-menu: var(--menu-bg);
+  --color-menu-fg: var(--menu-fg);
+  --color-menu-line: rgb(255 255 255 / .2);
+  --color-projects: var(--projects-bg);
+  --color-projects-fg: var(--projects-fg);
+  --color-projects-muted: var(--projects-muted);
+  --color-projects-accent: var(--projects-accent);
+  --color-projects-line: var(--projects-line);
+  --color-tag-line: rgb(255 255 255 / .25);
+
+  /* Fonds des visuels de projets : identiques en clair et en sombre. */
+  --color-tone-olive: #686b4b;
+  --color-tone-terracotta: #c77c5d;
+  --color-tone-sand: #ded2c1;
+  --color-tone-light: #f4efe6;
+  --color-tone-dark: #252722;
+
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-body: 'DM Sans Variable', system-ui, sans-serif;
+}

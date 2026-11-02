@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr" class="scheme-light scroll-smooth motion-reduce:scroll-auto dark:scheme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N’Famory Traoré — Développeur web à Conakry</title>
+    <meta
+      name="description"
+      content="Portfolio de N’Famory Traoré, étudiant en génie informatique à Conakry. Applications web avec React et Tailwind CSS, exploration du mobile avec Kotlin et SwiftUI."
+    />
+    <meta name="theme-color" content="#f4efe6" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph / partage -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="N’Famory Traoré — Développeur web à Conakry" />
+    <meta
+      property="og:description"
+      content="Applications web claires et rapides avec React et Tailwind CSS. Découvrez mes projets : Quizzy, TaskFlow, SmartResto et AfroClass."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="N’Famory Traoré, développeur web" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--
+      Ce petit script s'exécute AVANT l'affichage de la page :
+      1. il ajoute la classe "js" (les animations ne cachent rien si JavaScript est coupé) ;
+      2. il applique le thème choisi (sauvegardé) ou celui du système, pour éviter un éclair blanc.
+    -->
+    <script>
+      (function () {
+        var root = document.documentElement
+        root.classList.add('js')
+        var theme = null
+        try {
+          theme = localStorage.getItem('theme')
+        } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+        root.setAttribute('data-theme', theme)
+      })()
+    </script>
+  </head>
+  <body class="min-w-[320px] bg-paper font-body text-ink antialiased [font-synthesis:none] [-webkit-tap-highlight-color:transparent] [&_:focus-visible]:outline-2 [&_:focus-visible]:outline-offset-4 [&_:focus-visible]:outline-focus">
+    <div id="root"></div>
+    <noscript>Ce portfolio a besoin de JavaScript pour s’afficher. Merci de l’activer.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
