@@ -24,8 +24,8 @@ export const timeline = [
     text: 'Conception et développement de deux applications web, de la maquette au code.',
   },
   {
-    date: '2026 — en cours',
-    category: 'Exploration mobile',
+    date: '2026 — en 7/10/2026',
+    category: 'Orange Digital Center',
     title: 'Kotlin, Jetpack Compose et SwiftUI',
     text: 'Application Android de révision hors ligne en équipe (Kotlin, Jetpack Compose, Room) et application de recettes en SwiftUI.',
   },

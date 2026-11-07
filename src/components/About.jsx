@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import Photo from "../assets/projet_image/photo.png"
 
 export default function About() {
   return (
@@ -6,7 +7,7 @@ export default function About() {
       <span aria-hidden="true" className="pointer-events-none absolute right-0 top-4 -z-10 font-display text-[100px] leading-none text-sand min-[901px]:top-6 min-[901px]:text-[180px]">01</span>
       <Reveal className="relative z-0">
         <p className="text-xs font-semibold tracking-[.04em] text-accent-strong">01 — À propos</p>
-        <h2 id="a-propos-titre" className="mt-7 font-display text-[42px] font-medium leading-[.96] tracking-[-.055em] min-[901px]:text-[clamp(50px,6vw,80px)]">Construire,<br />comprendre,<br /><span className="italic text-accent">progresser.</span></h2>
+        <img src={Photo} alt="Photo de profil" className="max-w-80 m-auto mask-b-from-20% mask-b-to-95% bg-[url(/img/mountains.jpg)] " />
       </Reveal>
       <Reveal className="pt-5 leading-[1.8] min-[901px]:pt-[72px]" delay={100}>
         <p className="mb-7 font-display text-[25px] leading-[1.4]">Étudiant en génie informatique à Conakry, je construis des interfaces web avec React et j’explore le mobile.</p>

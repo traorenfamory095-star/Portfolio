@@ -26,8 +26,8 @@ export const projects = [
     summary: 'Une application de quiz conçue pour rendre la pratique plus simple et plus engageante.',
     note: '',
     tags: ['JavaScript'], // ← à compléter (ex. React, Tailwind CSS)
-    github: '',
-    demo: '',
+    github: 'https://github.com/shammah-lab/Quizzy-Application-PrimeTek-26/pulls',
+    demo: 'https://youtu.be/el2th9EuKuU',
     image: {
       src: Quizzy,
       alt: 'Capture d’écran de Quizzy',
@@ -43,8 +43,8 @@ export const projects = [
     summary: 'Une application pour organiser ses projets et ses tâches au quotidien.',
     note: 'Création, modification et suppression, authentification simulée, filtres et recherche.',
     tags: ['React', 'JSON Server'], // ← à vérifier
-    github: '',
-    demo: '',
+    github: 'https://github.com/traorenfamory095-star/Taskflow-react',
+    demo: 'https://youtu.be/o-6iLSFtqb8',
     image: {
       src: TaskFlow,
       alt: 'Capture d’écran de TaskFlow',
@@ -60,8 +60,8 @@ export const projects = [
     summary: 'Une application de gestion de restaurant : de la commande en salle à la cuisine, jusqu’à la facture.',
     note: 'Projet en développement. Les captures finales seront ajoutées à la fin du projet.',
     tags: ['Nuxt', 'Tailwind CSS', 'API'],
-    github: '',
-    demo: '',
+    github: 'https://github.com/traorenfamory095-star/smartresto',
+    demo: 'https://youtu.be/QcqrtzPZZSM',
     image:{
       src: SmartResto,
       alt: 'Capture d’écran de SmartResto',
@@ -77,8 +77,8 @@ export const projects = [
   summary: 'Une application mobile de révision pour accompagner les élèves dans leur préparation aux examens du BAC et du BEPC.',
   note: 'Projet Android en développement, avec une approche offline-first.',
   tags: ['Kotlin', 'Jetpack Compose', 'Room'],
-  github: '',
-  demo: '',
+  github: 'https://github.com/traorenfamory095-star/karan',
+  demo: 'https://youtu.be/6KB4szsme-o',
   image: {
       src: Karan,
       alt: 'Capture d’écran de Karan',
@@ -94,8 +94,8 @@ export const projects = [
   summary: 'Une application iOS autour de la découverte et de la consultation de recettes de cuisine.',
   note: 'Projet iOS. Captures et fonctionnalités détaillées à compléter.',
   tags: ['Swift', 'SwiftUI'],
-  github: '',
-  demo: '',
+  github: 'https://github.com/traorenfamory095-star/Recette-de-cupertino',
+  demo: 'https://youtu.be/SNXIwTSaodw',
   image: {
       src: RecetteCurpertino,
       alt: 'Capture d’écran de RecetteCurpertino',
@@ -111,7 +111,7 @@ export const projects = [
   summary: 'Une plateforme éducative dédiée aux élèves africains, pour apprendre, réviser et progresser grâce aux cours, exercices, quiz et outils d’accompagnement.',
   note: 'Projet en développement. Une vision orientée vers l’accessibilité de l’éducation en Afrique.',
   tags: ['React', 'Tailwind CSS', 'JavaScript'],
-  github: '',
+  github: 'https://github.com/traorenfamory095-star/AfroClass',
   demo: '',
   image: {
       src: AfroClass,

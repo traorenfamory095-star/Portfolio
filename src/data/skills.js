@@ -1,6 +1,8 @@
 export const skills = [
-  { index: '01', title: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Jest', 'Vue', 'Next'] },
-  { index: '02', title: 'Outils', items: ['Git', 'GitHub', 'Vite', 'Figma', 'JSON Server'] },
-  { index: '03', title: 'Mobile', items: ['Kotlin', 'Jetpack Compose', 'SwiftUI'] },
-  { index: '04', title: 'En apprentissage', items: ['Nuxt', 'Développement backend', 'Architecture logicielle'] },
+  { index: '01', title: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Jest', 'Vue', 'Next','Bootstrap','SCSS'] },
+  { index: '02', title: 'Langages', items: ['Langage C','Python'] },
+  { index: '03', title: 'Backend', items: ['Node.js'] },
+  { index: '04', title: 'Outils', items: ['Git', 'GitHub', 'Vite', 'Figma', 'JSON Server','Linux'] },
+  { index: '05', title: 'Mobile', items: ['Kotlin', 'Jetpack Compose', 'SwiftUI'] },
+  { index: '06', title: 'En apprentissage', items: ['Nuxt', 'Développement backend', 'Architecture logicielle'] },
 ]

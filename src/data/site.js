@@ -7,7 +7,7 @@
 // À RENSEIGNER par N'Famory (laisser '' pour masquer) :
 const profile = {
   email: 'traorenfamory095@gmail.com',
-  whatsappNumber: '610720531',
+  whatsappNumber: '224610720531',
   githubUser: 'https://github.com/traorenfamory095-star',
   linkedinSlug: 'https://www.linkedin.com/in/n-famory-traore-14976b397/', 
   cvUrl: '', //            ex. '/cv-nfamory-traore.pdf' (fichier à déposer dans /public)
