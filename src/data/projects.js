@@ -11,8 +11,8 @@
 // ⚠ À VÉRIFIER par N'Famory : les technologies de Quizzy et de TaskFlow.
 import Quizzy from '../assets/projet_image/quizzy.webp'
 import AfroClass from '../assets/projet_image/afroclass.webp'
-import Karan from '../assets/projet_image/karan.webp'
-import RecetteCurpertino from '../assets/projet_image/recettecupertino.webp'
+import Karan from '../assets/projet_image/karan.png'
+import RecetteCurpertino from '../assets/projet_image/recettecupertino.png'
 import SmartResto from '../assets/projet_image/smartresto.webp'
 import TaskFlow from '../assets/projet_image/taskflow.webp'
 
