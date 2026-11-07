@@ -11,7 +11,6 @@ Portfolio de développeur web, projet individuel du Codecamp PrimeTek Academy (2
 ## Technologies
 
 - **React 19** + **Vite** : composants réutilisables, démarrage et build très rapides.
-- **React Router 8** : deux pages (`/` et `/guide-style`), navigation sans rechargement.
 - **Tailwind CSS 4** : la mise en page, les espacements, la typographie, les états interactifs et le responsive sont réalisés avec des classes utilitaires directement dans les composants. `src/index.css` conserve uniquement le thème (couleurs clair / sombre, polices) : aucune autre règle CSS, aucun style en ligne. Les réglages globaux (défilement doux, police et fond du `body`, contour de focus, `prefers-reduced-motion`) sont eux aussi des classes utilitaires, posées sur `<html>` et `<body>` dans `index.html` ou avec `motion-reduce:` dans les composants.
 - **Fontsource** : les polices Fraunces et DM Sans sont hébergées avec le site (pas de requête vers Google Fonts, donc plus rapide).
 - Hébergement : **Vercel**.
