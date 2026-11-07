@@ -8,7 +8,7 @@ export const timeline = [
   {
     date: '2025 — en cours',
     category: 'Formation',
-    title: 'Licence 1 Génie informatique',
+    title: 'Licence 2 Génie informatique',
     text: 'Institut Polytechnique de l’Université Gamal Abdel Nasser de Conakry : bases de la programmation et de l’ingénierie logicielle.',
   },
   {

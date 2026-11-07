@@ -8,8 +8,8 @@
 const profile = {
   email: 'traorenfamory095@gmail.com',
   whatsappNumber: '224610720531',
-  githubUser: 'https://github.com/traorenfamory095-star',
-  linkedinSlug: 'https://www.linkedin.com/in/n-famory-traore-14976b397/', 
+  githubUser: 'traorenfamory095-star/',
+  linkedinSlug: 'n-famory-traore-14976b397/', 
   cvUrl: '', //            ex. '/cv-nfamory-traore.pdf' (fichier à déposer dans /public)
 }
 
@@ -19,7 +19,7 @@ export const site = {
   role: 'Développeur web & logiciel',
   statement: 'Développeur web à Conakry. Je construis des applications claires et rapides.',
   description:
-    'Étudiant en Licence 1 Génie informatique à l’Institut Polytechnique, je travaille avec React et Tailwind CSS et j’explore le mobile avec Kotlin et SwiftUI.',
+    'Étudiant en Licence 2 Génie informatique à l’Institut Polytechnique, je travaille avec React, Tailwind CSS et d\'autres. J’explore le mobile avec Kotlin et SwiftUI.',
   carnet: {
     label: 'Carnet de travail — 2026',
     // Espaces insécables ( ) : le guillemet « » ne reste jamais seul en bout de ligne.

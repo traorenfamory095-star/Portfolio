@@ -1,5 +1,18 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Fraunces Variable';
+  src: url('/fonts/fraunces.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans Variable';
+  src: url('/fonts/dm-sans.woff2') format('woff2');
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
 /* Ce fichier ne contient que le thème (couleurs, polices, variante « dark »).
    Toute la mise en forme est faite avec des classes utilitaires Tailwind dans les composants. */
 

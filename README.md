@@ -5,8 +5,8 @@ Portfolio de développeur web, projet individuel du Codecamp PrimeTek Academy (2
 | | |
 |---|---|
 | **Site en ligne** | _à renseigner après le déploiement Vercel_ : `https://….vercel.app` |
-| **Maquette Figma** | _à renseigner_ : lien en lecture seule |
-| **Dépôt** | _à renseigner_ : `https://github.com/<mon-compte>/portfolio` |
+| **Maquette Figma** | https://www.figma.com/make/befN56t7e6EdUdix7ho2P0/Portfolio-N%E2%80%99Famory-Traor%C3%A9?t=lYc6ed94dQQGK8ZK-1&preview-route=%2F%23projets |
+| **Dépôt** | https://github.com/traorenfamory095-star/Portfolio |
 
 ## Technologies
 
@@ -17,7 +17,7 @@ Portfolio de développeur web, projet individuel du Codecamp PrimeTek Academy (2
 - Hébergement : **Vercel**.
 
 ### Pourquoi React ?
-_À préparer pour la présentation, avec mes mots. Pistes : je le connais déjà (cours OpenClassrooms, WEF Agency) ; une carte de projet = un composant alimenté par un tableau de données ; Vite donne un retour immédiat pendant le développement ; c’est le même mode de pensée que Nuxt/Vue utilisé dans SmartResto._
+Je souhaite à profondir mes connaissances en react d'où le choix pour une meilleur évolution à l'avenir
 
 ## Lancer le projet
 
@@ -32,20 +32,19 @@ npm run preview    # teste la version construite
 
 ```
 src/
-├── pages/           ← HomePage (accueil) et GuidePage (/guide-style)
+├── pages/           ← HomePage (accueil)
 ├── data/            ← tout le contenu, séparé du code
 │   ├── site.js        nom, phrases, coordonnées de contact
 │   ├── projects.js    les projets (une carte par objet)
 │   ├── skills.js      les compétences
 │   ├── timeline.js    le parcours
-│   ├── palette.js     les couleurs du guide de style
 │   └── navigation.js  le menu
 ├── components/      ← un composant par section / élément
 ├── hooks/           ← useTheme, useActiveSection
 └── index.css        ← thème uniquement : couleurs (clair / sombre) et polices
 ```
 
-**Ajouter un projet** : copier un bloc dans `src/data/projects.js`. Rien d’autre à modifier.
+
 
 ## Défi personnel
 
@@ -55,7 +54,13 @@ Au premier chargement, le site suit `prefers-color-scheme`. Le bouton de l’en-
 **2. Animations au défilement** (`src/components/Reveal.jsx`)
 Fondu + glissement de 24 px avec `IntersectionObserver`, une seule fois par élément. Les états visuels sont composés avec des classes utilitaires Tailwind (`opacity`, `translate`, `transition`). La préférence `prefers-reduced-motion` est respectée.
 
-_Ce que j’ai appris : à compléter avec mes mots avant la présentation._
+## Ce que j’ai appris : 
+
+Les animations au défilement. J’ai appris à utiliser IntersectionObserver pour déclencher une animation quand un élément entre dans l’écran, au lieu d’écouter l’événement scroll, qui est plus coûteux. Le composant Reveal observe chaque élément une seule fois, puis cesse de l’observer (disconnect). Je n’anime que opacity et translate-y, deux propriétés peu coûteuses pour le navigateur. J’ai aussi appris qu’une animation doit rester accessible : prefers-reduced-motion désactive les mouvements pour les personnes qui le demandent, et la classe js posée dans index.html évite que le contenu reste caché si JavaScript est coupé. Autre leçon propre à Tailwind : les classes doivent être écrites en entier dans le code (d’où la table des délais), sinon Tailwind ne les détecte pas.
+
+Le hook useTheme. J’ai appris à lire la préférence du système avec prefers-color-scheme, et à mémoriser le choix de l’utilisateur dans localStorage. Le point le plus instructif : sans précaution, la page s’affiche d’abord en clair avant de passer en sombre (un « éclair blanc »). Je l’ai réglé avec un petit script dans le <head> de index.html, qui applique le thème avant l’affichage, avant même que React ne démarre. J’ai aussi appris à protéger l’accès à localStorage avec un try/catch, car il peut être bloqué.
+
+Le test de performance avec Lighthouse. J’ai appris à lire un rapport et surtout à faire le tri : beaucoup de lignes sont des suggestions sans effet sur le score, et seules quelques-unes méritent d’être corrigées. Le vrai problème était mes images : environ 1,3 Mo de trop, à cause d’une photo non redimensionnée. Je l’ai corrigé en réduisant sa taille, en la convertissant en WebP et en ajoutant width et height pour éviter les décalages de mise en page. J’ai aussi appris que Lighthouse vérifie le contraste, y compris sur un simple chiffre décoratif, et qu’on peut le masquer aux lecteurs d’écran avec aria-hidden. Enfin, il faut mesurer sur le site déployé, pas seulement en local : les résultats peuvent différer.
 
 ## Fidélité maquette / site
 
@@ -99,31 +104,6 @@ Mesure locale, version mobile, avant déploiement :
 | Performance | 85 | 99 |
 | Accessibilité | 90 | 100 |
 | Bonnes pratiques | 90 | 100 |
-| SEO | 90 | 100 |
-
-_À refaire sur le site déployé (Chrome → Outils de développement → Lighthouse → Mobile), puis joindre la capture :_
+| SEO | 90 | 100 |_
 
 ![Rapport Lighthouse](docs/lighthouse.png)
-
-## Accessibilité
-
-Un seul `h1`, titres hiérarchisés, lien « Aller au contenu », navigation au clavier, focus visible, textes alternatifs, menu mobile fermé par la touche Échap, liens externes annoncés « s’ouvre dans un nouvel onglet ».
-
-## À faire avant la présentation
-
-- [ ] Renseigner e-mail, WhatsApp, GitHub, LinkedIn dans `src/data/site.js`.
-- [ ] Créer un CV professionnel si nécessaire, puis le déposer dans `public/` et renseigner `cvUrl` (le bouton reste masqué tant que cette valeur est vide).
-- [ ] Vérifier les technologies de Quizzy et de TaskFlow dans `src/data/projects.js`.
-- [ ] Renseigner les liens `github` et `demo` de chaque projet.
-- [ ] Ajouter les captures d’écran dans `public/projets/` (SmartResto à la fin du projet).
-- [ ] Mettre le vrai lien du site dans `index.html` (`og:url` et `og:image` en adresse complète).
-- [ ] Mettre à jour la maquette Figma (mode sombre, écarts ci-dessus) et compléter les tableaux.
-- [ ] Faire relire les textes.
-
-## Déploiement
-
-1. Pousser le code sur GitHub (branche `main`).
-2. vercel.com → *Add New* → *Project* → importer le dépôt `portfolio`.
-3. Vercel détecte Vite (commande `npm run build`, dossier `dist`) → *Deploy*.
-   Le fichier `vercel.json` renvoie toutes les adresses vers `index.html` : sans lui, ouvrir `/guide-style` directement donnerait une erreur 404.
-4. Mettre le lien du site dans la description du dépôt et dans le profil GitHub.

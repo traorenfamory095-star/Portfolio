@@ -1,13 +1,25 @@
 import Reveal from './Reveal'
-import Photo from "../assets/projet_image/photo.png"
+import Photo from "../assets/projet_image/photo_v3.webp"
 
 export default function About() {
   return (
     <section className="relative isolate grid scroll-mt-[84px] grid-cols-1 gap-7 border-t border-line-soft py-20 min-[901px]:grid-cols-[.9fr_1.1fr] min-[901px]:gap-[80px] lg:gap-[140px] lg:py-[130px]" id="a-propos" aria-labelledby="a-propos-titre">
-      <span aria-hidden="true" className="pointer-events-none absolute right-0 top-4 -z-10 font-display text-[100px] leading-none text-sand min-[901px]:top-6 min-[901px]:text-[180px]">01</span>
+      <span
+        aria-hidden="true"
+        data-num="01"
+        className="pointer-events-none absolute right-0 top-4 -z-10 font-display text-[100px] leading-none text-sand before:content-[attr(data-num)] min-[901px]:top-6 min-[901px]:text-[180px]"
+      />
       <Reveal className="relative z-0">
         <p className="text-xs font-semibold tracking-[.04em] text-accent-strong">01 — À propos</p>
-        <img src={Photo} alt="Photo de profil" className="max-w-80 m-auto mask-b-from-20% mask-b-to-95% bg-[url(/img/mountains.jpg)] " />
+        <img
+          src={Photo}
+          alt="Portrait de N’Famory Traoré"
+          width="640"
+          height="954"
+          loading="lazy"
+          decoding="async"
+          className="m-auto h-auto max-w-80 mask-b-from-20% mask-b-to-95%"
+        />
       </Reveal>
       <Reveal className="pt-5 leading-[1.8] min-[901px]:pt-[72px]" delay={100}>
         <p className="mb-7 font-display text-[25px] leading-[1.4]">Étudiant en génie informatique à Conakry, je construis des interfaces web avec React et j’explore le mobile.</p>
